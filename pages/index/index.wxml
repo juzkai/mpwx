@@ -1,0 +1,95 @@
+<!--index.wxml-->
+<view class='personal-wrap'>
+  <image src='{{userInfo.avatarUrl}}'></image>
+  <view style='color:#fff;'>
+    <text style='display:block;margin-top:40rpx;'>{{userInfo.nickName}}</text>
+    <text style='display:block;margin-top:20rpx;'>{{userInfo.city}}--{{userInfo.province}}--{{userInfo.country}}</text>
+  </view>
+</view>
+<view class="row">
+    <view class="col text-center bgc-white border-bottom item">
+        <view class="col-4 border-right item-img-wrap" bindtap='toItem1'>
+          <view class=''>
+            <image src='../../resources/img/location.png' mode='scaleToFill'class="img-64"></image>
+          </view>
+            <text>接口调用</text>
+        </view>
+         <view class="col-4 border-right item-img-wrap" bindtap='toItem2'>
+          <view class=''>
+            <image src='../../resources/img/location.png' mode='scaleToFill'class="img-64"></image>
+          </view>
+            <text>页面跳转</text>
+        </view>
+         <view class="col-4 border-right item-img-wrap" bindtap='getSystemInfo'>
+          <view class=''>
+            <image src='../../resources/img/location.png' mode='scaleToFill'class="img-64"></image>
+          </view>
+            <text>系统信息</text>
+        </view>
+    </view>
+    <view class="col text-center bgc-white border-bottom item">
+        <view class="col-4 border-right item-img-wrap" bindtap='getSystemInfoSync'>
+          <view class=''>
+            <image src='../../resources/img/location.png' mode='scaleToFill'class="img-64"></image>
+          </view>
+            <text>系统信息同步</text>
+        </view>
+         <view class="col-4 border-right item-img-wrap" bindtap='getNetworkType'>
+          <view class=''>
+            <image src='../../resources/img/location.png' mode='scaleToFill'class="img-64"></image>
+          </view>
+            <text>网络类型</text>
+        </view>
+         <view class="col-4 border-right item-img-wrap" bindtap='vibrateLong'>
+          <view class=''>
+            <image src='../../resources/img/location.png' mode='scaleToFill'class="img-64"></image>
+          </view>
+            <text>手机振动400ms</text>
+        </view>
+    </view>
+    <view class="col text-center bgc-white border-bottom item">
+        <view class="col-4 border-right item-img-wrap" bindtap='makePhoneCall'>
+          <view class=''>
+            <image src='../../resources/img/location.png' mode='scaleToFill'class="img-64"></image>
+          </view>
+            <text>拨打电话</text>
+        </view>
+         <view class="col-4 border-right item-img-wrap" bindtap='chooseImage'>
+          <view class=''>
+            <image src='../../resources/img/location.png' mode='scaleToFill'class="img-64"></image>
+          </view>
+            <text>选择图片</text>
+        </view>
+         <view class="col-4 border-right item-img-wrap" bindtap='scanCode'>
+          <view class=''>
+            <image src='../../resources/img/location.png' mode='scaleToFill'class="img-64"></image>
+          </view>
+            <text>扫码</text>
+        </view>
+    </view>
+     <view class="col text-center bgc-white border-bottom item">
+        <view class="col-4 border-right item-img-wrap" bindtap='startCompass'>
+          <view class=''>
+            <image src='../../resources/img/location.png' mode='scaleToFill'class="img-64"></image>
+          </view>
+            <text>开始罗盘</text>
+        </view>
+         <view class="col-4 border-right item-img-wrap" bindtap='stopCompass'>
+          <view class=''>
+            <image src='../../resources/img/location.png' mode='scaleToFill'class="img-64"></image>
+          </view>
+            <text>停止罗盘</text>
+        </view>
+         <view class="col-4 border-right item-img-wrap" bindtap=''>
+          <view class=''>
+            <image src='../../resources/img/location.png' mode='scaleToFill'class="img-64"></image>
+          </view>
+            <text>item</text>
+        </view>
+    </view>
+</view>
+ <view class="container">
+   <!-- <button open-type='toHome' bindtap='getLocation' class='btn position-btn'>当前位置</button> -->
+   <!-- <button open-type='toHome' bindtap='toHome' class='btn tab-btn'>跳转</button> -->
+</view> 
+<image class='scroll-top'src='../../resources/img/scroll-top.png'></image>

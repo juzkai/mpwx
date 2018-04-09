@@ -1,0 +1,20 @@
+/* 轮播图 */
+.swiper-wrap {
+  height: 375rpx;
+}
+.slide-image {
+  height: inherit;
+}
+/* 消息轮播 */
+.msg-container {
+  height: 60rpx;
+}
+.msg-wrap {
+  font-size:32rpx;
+  height: 60rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 60rpx;
+  color: #000;
+  padding-left: 10rpx;
+}

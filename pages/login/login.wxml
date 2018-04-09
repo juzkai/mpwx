@@ -1,0 +1,20 @@
+
+<form bindsubmit="formSubmit" style='margin-top:10%;display:block;'>
+  <view class='input-wrap'>
+     <view>用户名</view> 
+    <input name="userName" type='text' placeholder='请输入用户名'/>
+  </view>
+  <view class='input-wrap'>
+     <view>密码</view> 
+    <input name="psw" bindconfirm="loginConfirm" password="true" placeholder='请输入密码'/>
+  </view>
+  <view class='input-wrap'>
+     <view>身份证号</view> 
+    <input name="idCard" type='idcard' confirm-type="next" placeholder='请输入身份证号'/>
+  </view>
+  <view class='input-wrap'>
+     <view>手机号</view> 
+    <input name="mobileNum" type='number' confirm-type="next" placeholder='请输入手机号'/>
+  </view>
+  <button formType="submit" class='btn login-btn'>登录</button>
+</form>

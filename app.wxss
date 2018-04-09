@@ -1,0 +1,127 @@
+/**app.wxss**/
+page {
+  height: 100%;
+   background: #efeff4; 
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.row {
+  display: blcok;
+  margin: 0;
+  width: 100%;
+}
+
+.col {
+  display: flex;  
+  font-size: 32rpx;
+}
+
+.col>.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9,
+.col-10, .col-11, .col-12 {
+  overflow: hidden;
+}
+
+.col-1 {
+  width: 8.33333333333333%;
+}
+
+.col-2 {
+  width: 16.6666666666666%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333333%;
+}
+
+.col-5 {
+  width: 41.6666666666666%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.333333333333333%;
+}
+
+.col-8 {
+  width: 66.66666666666666%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33333333333333%;
+}
+
+.col-11 {
+  width: 91.66666666666666%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+.border-right {
+  border-right: 1rpx solid #efeff4;
+}
+.border-bottom {
+  border-bottom: 1rpx solid #efeff4;
+}
+.bgc-white {
+  background: #fff;
+}
+/* 输入框 */
+.input-wrap {
+  width: 100%;
+  border-bottom: 1px solid #efeff4;
+  display: flex;
+  background: #fff;
+}
+.input-wrap view {
+  margin:18rpx;
+  font-size:36rpx;
+  color:#666666;
+  width: 150rpx;
+}
+.input-wrap input {
+  background:#fff;
+  height:90rpx;
+  font-size:35rpx;
+  padding:0 30rpx;
+  flex: auto;
+}
+.btn {
+  line-height:90rpx;
+  font-size:35rpx;
+  background: -webkit-linear-gradient(#242424, #666666); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#242424, #666666); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#242424, #666666); /* Firefox 3.6 - 15 */
+  background: linear-gradient(#242424, #666666); /* 标准的语法 */
+  color:#fff;
+}
+.scroll-top {
+  width:80rpx;
+  height:80rpx;
+  position: fixed;
+  bottom: 10rpx;
+  right: 10rpx;
+  z-index: 9999;
+}
