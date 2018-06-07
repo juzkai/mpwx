@@ -1,5 +1,5 @@
 
-export const APP_SERVE_URL = 'http://api.map.baidu.com/';
+export const APP_SERVE_URL = 'http://192.168.2.110:8080/HttpTask/';
 export const APP_API = {
-  query: 'telematics/v3/weather'
+  query: 'juzkai/user/getinfo'
 }

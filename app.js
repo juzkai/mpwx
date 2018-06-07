@@ -7,12 +7,18 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    // 监听网络状态变化
     let _this = this;
+    // 监听网络状态变化
     wx.onNetworkStatusChange(function (res) {
       _this.toast(`当前为${res.networkType}网络`);
     })
-
+    // 获取系统信息
+    wx.getSystemInfo({
+      success: res => {
+        console.log(res);
+        _this.globalData.systemInfo = res;
+      }
+    })
     // 登录
     wx.login({
       success: res => {
@@ -111,7 +117,7 @@ App({
       params  = '?' + params;
     }
     wx.navigateTo({
-      url: `/pages/${url}/${url}` + params,
+      url: `/pages/${url}/${url}` + params
     })
   },
   /**
@@ -124,8 +130,10 @@ App({
     wx.request({
       url: url,
       data: data,
+      method: 'POST',
+      dataType: 'json',
       header: {
-        'content-type': 'application/json' // 默认值
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
       success: function (res) {
         ok ? ok(res) : '';
@@ -220,6 +228,7 @@ App({
     userInfo: null,
     showLoadingText: '加载中',
     showModalTitle: '提示',
-    token: ''
+    token: '',
+    systemInfo:{}
   }
 })

@@ -28,25 +28,25 @@ function showModal(msg, options, ok, cancel, complete) {
     confirmColor: defOption.confirmColor,
     success: function (res) {
       if (res.confirm) {
-        if (options === 'object' && ok) {
+        if (typeof options === 'object' && ok) {
           ok();
-        } else if (options === 'function') {
-          ok();
+        } else if (typeof options === 'function') {
+          options();
         }
       } else if (res.cancel) {
-        if (options === 'object' && ok && cancel) {
+        if (typeof options === 'object' && ok && cancel) {
           cancel();
-        } else if (options === 'function' && ok && !cancel && !complete) {
+        } else if (typeof options === 'function' && ok && !cancel && !complete) {
           ok();
-        } else if (options === 'function' && ok && cancel && !complete) {
+        } else if (typeof options === 'function' && ok && cancel && !complete) {
           ok();
         }
       }
     },
     complete: function () {
-      if (options === 'object' && ok && cancel && complete) {
+      if (typeof options === 'object' && ok && cancel && complete) {
         complete();
-      } else if (options === 'function' && ok && cancel && !complete) {
+      } else if (typeof options === 'function' && ok && cancel && !complete) {
         cancel();
       }
     }
