@@ -1,0 +1,6 @@
+<scroll-view style='height:100%;' scroll-y="true" bindscroll="scroll">
+  <view style='height:500%;'>
+  123
+  </view>
+</scroll-view>
+<image hidden="{{showTop}}" class='scroll-top'src='../../resources/img/scroll-top.png'></image>

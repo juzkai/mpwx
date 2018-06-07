@@ -58,7 +58,7 @@
           <view class=''>
             <image src='../../resources/img/location.png' mode='scaleToFill'class="img-64"></image>
           </view>
-            <text>选择图片</text>
+            <text>选择图片</text> 
         </view>
          <view class="col-4 border-right item-img-wrap" bindtap='scanCode'>
           <view class=''>
@@ -80,16 +80,16 @@
           </view>
             <text>停止罗盘</text>
         </view>
-         <view class="col-4 border-right item-img-wrap" bindtap=''>
+         <view class="col-4 border-right item-img-wrap" bindtap='toListPage'>
           <view class=''>
             <image src='../../resources/img/location.png' mode='scaleToFill'class="img-64"></image>
           </view>
-            <text>item</text>
+            <text>toListPage</text>
         </view>
     </view>
 </view>
- <view class="container">
-   <!-- <button open-type='toHome' bindtap='getLocation' class='btn position-btn'>当前位置</button> -->
-   <!-- <button open-type='toHome' bindtap='toHome' class='btn tab-btn'>跳转</button> -->
-</view> 
+ <!-- <view class="container">
+    <button open-type='toHome' bindtap='getLocation' class='btn position-btn'>当前位置</button> 
+    <button open-type='toHome' bindtap='toHome' class='btn tab-btn'>跳转</button> 
+</view>  -->
 <image class='scroll-top'src='../../resources/img/scroll-top.png'></image>

@@ -78,9 +78,7 @@ Page({
   },
   toItem1: function () {
     app.post(APP_SERVE_URL + APP_API.query, {
-      location: '济南',
-      output: 'json',
-      ak: '5slgyqGDENN7Sy7pw29IUvrZ'
+      id: 1
     }, function (response) {
       console.log(response);
       dialog.alert(JSON.stringify(response));
@@ -146,9 +144,14 @@ Page({
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       success: function (res) {
-        dialog.alert(JSON.stringify(res));
-        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-        var tempFilePaths = res.tempFilePaths;
+        dialog.alert(JSON.stringify(res), function () {
+          // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+          let tempFilePaths = res.tempFilePaths; // Arrray
+          // 预览图片
+          wx.previewImage({
+            urls: tempFilePaths, // Array
+          })
+        });
       }
     })
   },
@@ -180,7 +183,7 @@ Page({
       }
     });
     wx.onCompassChange(function (res) {
-      dialog.toast(res.direction);
+      dialog.toast(res.direction.toString());
     })
   },
   /**
@@ -188,5 +191,11 @@ Page({
    */
   stopCompass: function () {
     wx.stopCompass();
+  },
+  /**
+   *  跳转到列表页面
+   */
+  toListPage: function () {
+    app.go('list');
   }
 })
